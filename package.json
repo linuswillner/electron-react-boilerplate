@@ -1,0 +1,69 @@
+{
+  "name": "electron-react-boilerplate",
+  "productName": "Electron React Boilerplate",
+  "version": "1.0.0",
+  "description": "My personal Electron with React boilerplate, leveraging electron-webpack",
+  "main": "index.js",
+  "electronWebpack": {
+    "renderer": {
+      "webpackConfig": "webpack.config.js"
+    }
+  },
+  "scripts": {
+    "start": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "build": "rimraf dist && npm run compile && electron-builder",
+    "build:dir": "npm run build -- --dir -c.compression=store -c.mac.identity=null",
+    "test": "eslint . && stylelint **/*.scss",
+    "test:fix": "eslint . --fix && stylelint **/*.scss --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linuswillner/electron-react-boilerplate.git"
+  },
+  "author": "Linus Willner <hello@linuswillner.me> (https://linuswillner.me)",
+  "bugs": {
+    "url": "https://github.com/linuswillner/electron-react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/linuswillner/electron-react-boilerplate#readme",
+  "dependencies": {
+    "defaults": "^1.0.3",
+    "source-map-support": "^0.5.19"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.10.1",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-react": "^7.10.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "electron": "^9.0.2",
+    "electron-builder": "^22.7.0",
+    "electron-webpack": "^2.8.2",
+    "eslint": "^7.1.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hot-loader": "^4.12.21",
+    "rimraf": "^3.0.2",
+    "sass-loader": "^8.0.2",
+    "stylelint": "^13.5.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
+    "stylelint-no-unsupported-browser-features": "^4.0.0",
+    "stylelint-no-unused-selectors": "^1.0.28",
+    "stylelint-scss": "^3.17.2",
+    "stylelint-selector-no-empty": "^1.0.7",
+    "stylelint-use-nesting": "^3.0.0",
+    "webpack": "^4.43.0"
+  }
+}
