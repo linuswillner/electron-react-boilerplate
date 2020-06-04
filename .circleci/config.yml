@@ -19,5 +19,5 @@ jobs:
           name: Run tests
           command: npm test
       - run:
-        name: Generate test build
-        command: npm run build
+          name: Generate test build
+          command: npm run build
