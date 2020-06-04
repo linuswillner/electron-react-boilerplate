@@ -3,9 +3,12 @@ import os from 'os'
 
 export default class Main extends Component {
   render () {
-    const style = { color: 'red' }
+    const style = { color: 'blue' }
     return (
-      <div style={style}>
+      <div
+        className='main'
+        style={style}
+      >
         Hello world! This paragraph is {style?.color}, and is running on {os.hostname()}.
       </div>
     )
